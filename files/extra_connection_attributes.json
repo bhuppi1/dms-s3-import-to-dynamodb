@@ -1,0 +1,25 @@
+{
+  "TableCount": "1",
+  "Tables": [
+    {
+      "TableName": "test",
+      "TablePath": "import/test/",
+      "TableOwner": "import",
+      "TableColumns": [
+        {
+          "ColumnName": "id",
+          "ColumnType": "STRING",
+          "ColumnNullable": "false",
+          "ColumnIsPk": "true",
+          "ColumnLength": "25"
+        },
+        {
+          "ColumnName": "value",
+          "ColumnType": "INT8",
+          "ColumnLength": "1"
+        }
+      ],
+      "TableColumnsTotal": "2"
+    }
+  ]
+}
