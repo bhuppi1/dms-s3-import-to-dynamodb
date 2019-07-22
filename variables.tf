@@ -19,7 +19,7 @@ variable "dynamodb_table_read_capacity" {
 }
 
 variable "dms_replication_instance_type" {
-  default = "dms.t2.large"
+  default = "dms.t2.small"
 }
 
 variable "source_endpoint_id" {

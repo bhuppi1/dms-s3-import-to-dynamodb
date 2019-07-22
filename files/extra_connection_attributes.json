@@ -14,9 +14,10 @@
           "ColumnLength": "25"
         },
         {
-          "ColumnName": "value",
-          "ColumnType": "INT8",
-          "ColumnLength": "1"
+          "ColumnName": "name_value",
+          "ColumnType": "STRING",
+          "ColumnNullable": "false",
+          "ColumnLength": "20"
         }
       ],
       "TableColumnsTotal": "2"

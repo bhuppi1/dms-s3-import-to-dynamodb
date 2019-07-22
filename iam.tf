@@ -1,13 +1,13 @@
 resource "aws_iam_role" "dms_vpc_role" {
-  name = "dms_vpc_role"
+  name = "dms-vpc-role"
 
   assume_role_policy = data.aws_iam_policy_document.dms_vpc_role_policy.json
 }
 
 data "aws_iam_policy_document" "dms_vpc_role_policy" {
   statement {
+    effect  = "Allow"
     actions = [ "sts:AssumeRole" ]
-
     principals {
       type        = "Service"
       identifiers = [ "dms.amazonaws.com" ]
@@ -34,7 +34,7 @@ resource "aws_iam_policy_attachment" "dms_vpc_role_dms" {
 }
 
 resource "aws_iam_role" "dms_cloudwatch_logs_role" {
-  name               = "dms_cloudwatch_logs_role"
+  name               = "dms-cloudwatch-logs-role"
   assume_role_policy = data.aws_iam_policy_document.dms_vpc_role_policy.json
 }
 
@@ -55,7 +55,7 @@ data "aws_iam_policy_document" "import_bucket_policy" {
     }
     actions   = [ "s3:GetBucketAcl" ]
     resources = [
-      "arn:aws:s3:::dynamodb_import_bucket"
+      "arn:aws:s3:::dynamodb-import-bucket"
     ]
   }
 
@@ -68,7 +68,7 @@ data "aws_iam_policy_document" "import_bucket_policy" {
     }
     actions   = [ "s3:PutObject" ]
     resources = [
-      "arn:aws:s3:::dynamodb_import_bucket/*"
+      "arn:aws:s3:::dynamodb-import-bucket/*"
     ]
     condition {
       test     = "StringEquals"

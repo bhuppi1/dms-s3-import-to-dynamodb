@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "dynamodb_import_bucket" {
-  bucket = "dynamodb_import_bucket"
+  bucket = "dynamodb-import-bucket"
 }
 
 resource "aws_s3_bucket_policy" "dynamodb_import_bucket" {

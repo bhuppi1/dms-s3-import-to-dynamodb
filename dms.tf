@@ -28,13 +28,13 @@ resource "aws_dms_endpoint" "target" {
 }
 
 resource "aws_dms_replication_instance" "dynamodb-import-instance" {
-  engine_version             = "3.1.2"
+  engine_version             = "3.1.3"
   multi_az                   = "false"
   publicly_accessible        = "false"
   replication_instance_class = var.dms_replication_instance_type
   replication_instance_id    = var.replication_instance_id
 
-  depends_on = [aws_iam_role.dms_vpc_role]
+  depends_on = [ aws_iam_role.dms_vpc_role ]
 
   tags = {
     description = "test"
