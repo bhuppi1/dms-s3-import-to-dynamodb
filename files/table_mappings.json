@@ -6,7 +6,7 @@
 			"rule-name": "1",
 			"object-locator": {
 				"schema-name": "import",
-				"table-name": "slr"
+				"table-name": "test"
 			},
 			"rule-action": "include"
 		},
@@ -17,9 +17,9 @@
 			"rule-action": "map-record-to-record",
 			"object-locator": {
 				"schema-name": "import",
-				"table-name": "slr"
+				"table-name": "test"
 			},
-			"target-table-name": "SLR",
+			"target-table-name": "test",
 			"mapping-parameters": {
 				"partition-key-name": "id",
 				"attribute-mappings": [
@@ -30,22 +30,10 @@
 						"value": "$${id}"
 					},
 					{
-						"target-attribute-name": "contact",
+						"target-attribute-name": "name_value",
 						"attribute-type": "scalar",
 						"attribute-sub-type": "string",
-						"value": "$${contact}"
-					},
-					{
-						"target-attribute-name": "consumer_id",
-						"attribute-type": "scalar",
-						"attribute-sub-type": "string",
-						"value": "$${consumer_id}"
-					},
-					{
-						"target-attribute-name": "sectors",
-						"attribute-type": "scalar",
-						"attribute-sub-type": "string",
-						"value": "$${sectors}"
+						"value": "$${name_value}"
 					}
 				]
 			}

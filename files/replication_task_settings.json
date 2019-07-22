@@ -45,8 +45,13 @@
 				"Id":"TASK_MANAGER",
 				"Severity":"LOGGER_SEVERITY_DEFAULT"
 			}
-		]
+		],
+		"CloudWatchLogGroup": "dms-tasks-replication-instance",
+		"CloudWatchLogStream": "dms-task-MW5DOHLW3RKO7S4KVR3RGJB4NE"
 	},
+	"CharacterSetSettings": null,
+	"LoopbackPreventionSettings": null,
+	"PostProcessingRules": null,
 	"ControlTablesSettings":{
 		"historyTimeslotInMinutes":5,
 		"ControlSchema":"",
