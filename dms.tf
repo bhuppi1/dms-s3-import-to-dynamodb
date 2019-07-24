@@ -35,10 +35,6 @@ resource "aws_dms_replication_instance" "dynamodb-import-instance" {
   replication_instance_id    = var.replication_instance_id
 
   depends_on = [ aws_iam_role.dms_vpc_role ]
-
-  tags = {
-    description = "test"
-  }
 }
 
 resource "aws_dms_replication_task" "dynamodb-import-task" {
