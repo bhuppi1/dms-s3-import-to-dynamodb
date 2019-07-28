@@ -1,42 +1,42 @@
 {
-	"rules": [
-		{
-			"rule-type": "selection",
-			"rule-id": "1",
-			"rule-name": "1",
-			"object-locator": {
-				"schema-name": "import",
-				"table-name": "test"
-			},
-			"rule-action": "include"
-		},
-		{
-			"rule-type": "object-mapping",
-			"rule-id": "2",
-			"rule-name": "2",
-			"rule-action": "map-record-to-record",
-			"object-locator": {
-				"schema-name": "import",
-				"table-name": "test"
-			},
-			"target-table-name": "test",
-			"mapping-parameters": {
-				"partition-key-name": "id",
-				"attribute-mappings": [
-					{
-						"target-attribute-name": "id",
-						"attribute-type": "scalar",
-						"attribute-sub-type": "string",
-						"value": "$${id}"
-					},
-					{
-						"target-attribute-name": "name_value",
-						"attribute-type": "scalar",
-						"attribute-sub-type": "string",
-						"value": "$${name_value}"
-					}
-				]
-			}
-		}
-	]
+  "rules": [
+    {
+      "rule-type": "selection",
+      "rule-id": "1",
+      "rule-name": "1",
+      "object-locator": {
+        "schema-name": "import",
+        "table-name": "test"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "object-mapping",
+      "rule-id": "2",
+      "rule-name": "2",
+      "rule-action": "map-record-to-record",
+      "object-locator": {
+        "schema-name": "import",
+        "table-name": "test"
+      },
+      "target-table-name": "test",
+      "mapping-parameters": {
+        "partition-key-name": "id",
+        "attribute-mappings": [
+          {
+            "target-attribute-name": "id",
+            "attribute-type": "scalar",
+            "attribute-sub-type": "string",
+            "value": "$${id}"
+          },
+          {
+            "target-attribute-name": "name_value",
+            "attribute-type": "scalar",
+            "attribute-sub-type": "string",
+            "value": "$${name_value}"
+          }
+        ]
+      }
+    }
+  ]
 }
